@@ -57,7 +57,7 @@ export default function Index() {
                  </video>
 
                 {data ? <div className="day-main">
-                    <h1>{data.location.name}</h1>
+                    <h1 className="main-text">{data.location.name}</h1>
                     <img src={data.current.condition.icon}></img>
                     <h1>{data.current.last_updated.slice(0,11)}</h1>
                     <h2> Sıcaklık: {data.current.temp_c}°</h2>
