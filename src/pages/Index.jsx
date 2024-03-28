@@ -31,6 +31,13 @@ export default function Index() {
     },[country]);
 
 
+    const chanceOfRain = data && data.forecast.forecastday.map((x) => {<div>{x.day.daily_chance_of_rain} ? {x.day.daily_chance_of_rain}  : 0</div>})
+    const isRain = chanceOfRain > 0;
+    const message = isRain ? 
+    <video autoPlay  loop muted><source style={{width:"200px"}} src="/src/img/125753 (360p).mp4" type="video/mp4"></source></video> :
+    <video autoPlay  loop muted><source style={{width:"200px"}} src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source></video> 
+
+
     const handleChage = (e) => {
         setInputvalue( e.target.value );
     } 
@@ -51,10 +58,7 @@ export default function Index() {
                 <button onClick={onSearch}><img src="/src/img/search-alt-2-regular-24.png" alt="" /></button>
                 </div>
 
-                <video autoPlay  loop muted>
-                    <source style={{width:"200px"}} src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source>
-                    {/* <source media="(min-width:200px )" srcset="/src/img/tree_-_3257 (360p).mp4" /> */}
-                 </video>
+                 <p>{message}</p>
 
                 {data ? <div className="day-main">
                     <h1 className="main-text">{data.location.name}</h1>
@@ -82,9 +86,6 @@ export default function Index() {
                         ) : null
                         )
                     })) :"Yükleniyor"}
-
-
-
                 </div>
             </div>
           </div>
