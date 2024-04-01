@@ -84,3 +84,20 @@ video {
 .main-text {
   color: rgb(249, 166, 0);
 }
+
+.xname {
+  & video {
+    width: 250px;
+  }
+}
+
+.data-container {
+  position: relative;
+}
+
+.data-content {
+  position: absolute;
+  top: 5px;
+  left: 53px;
+}
+
