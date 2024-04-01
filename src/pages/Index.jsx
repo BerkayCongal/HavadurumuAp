@@ -52,8 +52,8 @@ export default function Index() {
                     <input className="inputSearch" style={{width:inputbtn ? "" : "0px"}} onChange={(e)=> handleChage(e)} type="text" />
                     <button onClick={onSearch}><img src="/src/img/search-alt-2-regular-24.png" alt="" /></button>
                 </div>
-                <p style={{display: isRain && isRain[0] ? "block" : "none"}}> <video autoPlay  loop muted><source style={{ width: "200px", visibility: isRain && isRain[0] ? "visible" : "hidden" }} src="/src/img/125753 (360p).mp4" type="video/mp4"></source></video></p>
-                <p style={{display: isRain && isRain[0] ? "none" : "block"}}> <video autoPlay  loop muted><source style={{ width: "200px", visibility: isRain && isRain[0] ? "visible" : "hidden" }} src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source></video></p>
+                <p className="top-video" style={{display: isRain && isRain[0] ? "block" : "none"}}> <video autoPlay  loop muted><source  src="/src/img/125753 (360p).mp4" type="video/mp4"></source></video></p>
+                <p className="top-video" style={{display: isRain && isRain[0] ? "none" : "block"}}> <video autoPlay  loop muted><source  src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source></video></p>
 
                 {data ? <div className="day-main">
                     <h1 className="main-text">{data.location.name}</h1>
@@ -73,8 +73,8 @@ export default function Index() {
                             (
                             <div className="data-container" key={i}>
                                 <div className="xname">
-                                    <p style={{display: isRain && isRain[i] ? "block" : "none"}}> <video autoPlay  loop muted><source style={{ width: "200px", visibility: isRain && isRain[0] ? "visible" : "hidden" }} src="/src/img/125753 (360p).mp4" type="video/mp4"></source></video></p>
-                                    <p style={{display: isRain && isRain[i] ? "none" : "block"}}> <video autoPlay  loop muted><source style={{ width: "200px", visibility: isRain && isRain[0] ? "visible" : "hidden" }} src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source></video></p>
+                                    <p style={{display: isRain && isRain[i] ? "block" : "none"}}> <video autoPlay  loop muted><source src="/src/img/125753 (360p).mp4" type="video/mp4"></source></video></p>
+                                    <p style={{display: isRain && isRain[i] ? "none" : "block"}}> <video autoPlay  loop muted><source  src="/src/img/tree_-_3257 (360p).mp4" type="video/mp4"></source></video></p>
                                 </div>
                                 <div className="data-content">
                                     <h3>{x.date}</h3>
