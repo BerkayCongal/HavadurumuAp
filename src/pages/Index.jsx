@@ -61,6 +61,7 @@ export default function Index() {
                     <h1>{data.current.last_updated.slice(0,11)}</h1>
                     <h2> Sıcaklık: {data.current.temp_c}°</h2>
                     <h2>Yağışmiktarı: % {data.forecast.forecastday[0].day.daily_chance_of_rain}</h2>
+                    {/* <h2>Hava durumu :{data.forecast.forecastday[0].day.condition.text}</h2> */}
                 </div> :""}
                 
                 
